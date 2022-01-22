@@ -15,7 +15,7 @@ function idToShortURL(n) {
 
   // Reverse shortURL to complete base conversion
   shorturl.reverse()
-
+  console.log(shorturl.join(''))
   return shorturl.join('')
 }
 
@@ -32,5 +32,9 @@ function shortURLtoID(shortURL) {
     if ('0' <= shortURL[i] && shortURL[i] <= '9')
       id = id * 62 + shortURL[i].charCodeAt(0) - '0'.charCodeAt(0) + 52
   }
+  console.log(id)
   return id
 }
+
+let id = shortURLtoID('https://www.youtube.com/')
+idToShortURL(id)
